@@ -43,5 +43,7 @@ calculate avg difficulty level
 
 what about online resources? they don't have a certain criteria
 
+I can also record the work out time and period, like morning, afternoon or evening, to find out which period works best for me!
+
 
 

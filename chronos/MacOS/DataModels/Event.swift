@@ -20,18 +20,11 @@ enum Mat {
     case Coding
 }
 
-class Event {
+struct Event {
+    var id: Int
     var date: Date
     var title: String
     var level: Level
-    var material: Mat
+    var mat: Mat
     var state: Bool
-    
-    init() {
-        self.date = Date()
-        self.title = "haha"
-        self.level = Level.Easy
-        self.material = Mat.Book
-        self.state = false
-    }
 }

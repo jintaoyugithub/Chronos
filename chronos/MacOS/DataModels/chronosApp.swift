@@ -12,10 +12,6 @@ struct MyApp: App {
     @NSApplicationDelegateAdaptor(ChronosAppDelegate.self) var appDelegate
 
     var body: some Scene {
-//        WindowGroup {
-//            MainView()
-//        }
-        
         Settings {
             EmptyView()
         }
