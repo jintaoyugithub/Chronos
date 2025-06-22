@@ -6,18 +6,26 @@
 //
 
 import Foundation
+import SwiftUI
 
-enum Level {
+enum Level: String, Equatable, CaseIterable {
+    case Level
     case Easy
     case Middle
     case Hard
-    case NumOfLevels
+    
+    // for display in the drop down box
+    var localizedName: LocalizedStringKey {LocalizedStringKey(rawValue)}
 }
 
-enum Mat {
+enum Mat: String, Equatable, CaseIterable {
+    case Material
     case Video
     case Book
     case Coding
+    
+    // for display in the drop down box
+    var localizedName: LocalizedStringKey {LocalizedStringKey(rawValue)}
 }
 
 struct Event {

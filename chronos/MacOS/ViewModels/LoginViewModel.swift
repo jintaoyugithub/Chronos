@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+class LoginViewModel: ObservableObject {
+    @Published var email = ""
+    @Published var password = ""
+    @Published var errMsg = ""
+    
+    init() {
+        
+    }
+    
+    func login() {
+        
+    }
+    
+    func validate() {
+        
+    }
+}
