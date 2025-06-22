@@ -23,7 +23,7 @@ struct MainView: View {
                     Text("Other View")
                 }
             }
-            .frame(maxWidth: 300, maxHeight: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             // Custom Bottom Tab Bar
             VStack {
@@ -40,7 +40,7 @@ struct MainView: View {
             .padding()
             .background(Material.bar) // macOS 12+
         }
-        .frame(minWidth: 300, minHeight: 400)
+        .frame(minWidth: 300, minHeight: 250)
     }
 }
 

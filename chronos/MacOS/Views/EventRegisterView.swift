@@ -15,23 +15,27 @@ struct EventRegisterView: View {
             Form {
                 TextField("", text: $viewModel.title)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(5)
+                    .padding(.bottom, 5)
                 
+
                 Picker("", selection: $viewModel.level) {
                     ForEach(Level.allCases, id: \.self) {
                         value in
                         Text(value.localizedName).tag(value)
                     }
-                }.padding(5)
+                }
+                .padding(.bottom, 5)
                 
                 Picker("", selection: $viewModel.mat) {
                     ForEach(Mat.allCases, id: \.self) {
                         value in
                         Text(value.localizedName).tag(value)
                     }
-                }.padding(5)
+                }
+                .padding(.bottom, 5)
             }
-            .frame(alignment: .center)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(10)
             
             HStack{
                 // Register Button
@@ -47,6 +51,7 @@ struct EventRegisterView: View {
                             .bold()
                     }
                 }
+                .buttonStyle(PlainButtonStyle())
                 
                 // Cancel Button
                 Button {
@@ -61,8 +66,12 @@ struct EventRegisterView: View {
                             .bold()
                     }
                 }
+                .buttonStyle(PlainButtonStyle())
             }
+            .frame(maxWidth: .infinity, maxHeight: 20, alignment: .center)
         }
+        .padding(10)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
 }
 
