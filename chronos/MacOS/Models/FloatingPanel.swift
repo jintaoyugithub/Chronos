@@ -22,6 +22,7 @@ extension EnvironmentValues {
 /// Allow we use one floating panel disply differ views
 class FloatingPanel<Content: View>: NSPanel {
     private var curView: () -> Content
+    private var isPresent: Bool = false
     
     init(view: @escaping () -> Content,
          contentRect: NSRect,
@@ -29,15 +30,24 @@ class FloatingPanel<Content: View>: NSPanel {
          defer flag:Bool = false
     ) {
         self.curView = view
-        
+
         /// Init the window
         super.init(contentRect: contentRect,
                    styleMask: [.nonactivatingPanel, .titled, .resizable, .closable, .fullSizeContentView ],
                    backing: backing,
                    defer: flag)
         
+        
         setUpWindow()
         setUpContentView()
+    }
+    
+    func toggle() {
+        isPresent.toggle()
+    }
+    
+    func isShown() -> Bool {
+        return isPresent
     }
     
     /// Window Settings

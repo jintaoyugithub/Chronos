@@ -40,7 +40,7 @@ struct MainView: View {
             .padding()
             .background(Material.bar) // macOS 12+
         }
-        .frame(minWidth: 300, minHeight: 300)
+        .frame(minWidth: 300, minHeight: 400)
     }
 }
 
